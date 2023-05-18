@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}HOME{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12 mb-3">
+            <h4 class="text-center">Welcome {{ user.username }}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <form action="{% url 'logout' %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary" href="http://127.0.0.1:8000">Logout</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

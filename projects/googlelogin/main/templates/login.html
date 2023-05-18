@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}<h1 style="text-align: center;">Sign-in Page</h1>{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-8 mx-auto social-container my-2 order-md-1 text-center">
+            <img src="{% static 'logo.jpg' %}" style="height: auto; width: 300px; display: block; margin: 0 auto;">
+            <div style="text-align: center;">
+                <button class="btn btn-primary mb-2">
+                    <a href="{% url 'social:begin' 'google-oauth2' %}">Sign with Google</a>
+                </button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
